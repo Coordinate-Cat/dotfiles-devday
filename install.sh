@@ -1,6 +1,16 @@
 #!/bin/bash
 
-# Add your installation commands here
+function plug_mana () {
+  # github.com/user/repo
+  declare -r repo_path=$1
+  declare -r zsh_plugins_dir="$HOME/.zsh/plugins"
+  [[ ! -d $zsh_plugins_dir ]] && mkdir "$zsh_plugins_dir"
+  git clone "https://${repo_path}.git" "${zsh_plugins_dir}/${repo_path}"
+}
+
+plug_mana github.com/romkatv/powerlevel10k
+
+# add your installation commands here
 
 # Example: Install a package using apt-get
 # sudo apt-get install <package-name>
