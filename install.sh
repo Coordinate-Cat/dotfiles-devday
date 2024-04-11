@@ -16,7 +16,7 @@ ln -svf "$SCRIPT_DIR/.vimrc" ~/.vimrc
 
 plug_mana github.com/romkatv/powerlevel10k
 
-# add your installation commands here
+# Add your installation commands here
 
 # Example: Install a package using apt-get
 # sudo apt-get install <package-name>
