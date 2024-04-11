@@ -1,22 +1,23 @@
 " Editor-Settings{{{
 " Encoding{{{
-" Use utf-8 to overall encoding.
+" 全体的なエンコーディングには utf-8 を使用します。
 set encoding=utf-8
 scriptencoding utf-8
 
-" Use utf-8 when file write.
+" ファイルの書き込みには utf-8 を使用します。
 set fileencoding=utf-8
 
-" Use file encodings when loaded.
+" ロード時にファイルエンコーディングを使用します。
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 " }}}
 
-" Automatic line feed code recognition.
+" 改行コードを自動認識します。
 set fileformats=unix,dos
 
+" キャッシュ用のディレクトリパスを宣言
 let s:cache_dir = expand('~/.cache/vim')
 
-" make backup file.
+" backupfileをキャッシュ用のディレクトリに置くようにします
 let s:backup_dir = s:cache_dir . '/backup'
 if isdirectory(s:backup_dir)
   call mkdir(s:backup_dir, 'p')
@@ -24,7 +25,7 @@ if isdirectory(s:backup_dir)
   set backup
 endif
 
-" make swap file.
+" swapfileをキャッシュ用のディレクトリに置くようにします
 let s:swap_dir = s:cache_dir . '/swap'
 if isdirectory(s:swap_dir)
   call mkdir(s:swap_dir, 'p')
@@ -32,7 +33,7 @@ if isdirectory(s:swap_dir)
   set swapfile
 endif
 
-" make undo file.
+" undofileをキャッシュ用のディレクトリに置くようにします
 let s:undo_dir = s:cache_dir . '/undo'
 if isdirectory(s:undo_dir)
   call mkdir(s:swap_dir, 'p')
@@ -40,17 +41,17 @@ if isdirectory(s:undo_dir)
   set undofile
 endif
 
-" East asia ambigunous charactor width problem.
+" 東アジアの曖昧な文字幅の問題。
 set ambiwidth=single
 
-" Automatically load the file being edited
+" 編集中のファイルを自動的に読み込みます
 set autoread
 
-" Move the cursor one character ahead of the end of the line
+" カーソルを行末の 1 文字前に移動します
 set virtualedit=block
 
-" Use the clipboard on linux systems.
-set clipboard+=unnamedplus
+" レジスタにシステムクリップボードを使用します。
+set clipboard+=unnamed
 
 " diff vertical view
 set diffopt+=vertical,algorithm:histogram,indent-heuristic
@@ -61,55 +62,56 @@ set visualbell t_vb=
 " }}}
 
 " Display{{{
-" Display rows number.
+" 行番号を表示します。
 set number
 
-" Display relative rows number.
+" 相対的な行番号を表示します。
 set relativenumber
 
-" Display current row cursorline.
+" 現在の行のカーソルラインを表示します。
 set cursorline
 
 " }}}
 
 " Folding{{{
+" 3連続中括弧で囲まれた範囲を折り畳めるようにします
 set foldmethod=marker
 set foldlevel=0
 set foldcolumn=3
 " }}}
 
 " Search{{{
-" Highlight search results
+" 検索結果をハイライト表示する
 set hlsearch
 
-" Incremental search.
-" Search starts when you enter the first character of the search word.
+" インクリメンタル検索。
+" 検索ワードの最初の文字を入力すると検索が開始されます。
 set incsearch
 
-" Search is not case sensitive
+" 検索では大文字と小文字が区別されません
 set ignorecase
 
-" Searching in lowercase ignores uppercase and lowercase
+" 小文字で検索すると大文字と小文字が無視されます
 set smartcase
 
-" When the search progresses to the end of the file, search again from the beginning of the file.
+" ファイルの最後まで検索が進んだ場合は、再度ファイルの先頭から検索してください。
 set wrapscan
 " }}}
 
 " Indent{{{
-" Smart indent.
+" スマートインデント。
 set smartindent
 
-" Insert tab with half-width space.
+" 半角スペースを入れてタブを挿入します。
 set expandtab
 
-" The amount of blank space to insert with each command or smart indent.
+" 各コマンドまたはスマート インデントで挿入する空白スペースの量。
 set shiftwidth=2
 
-" Tab width with 2 spaces.
+" スペース 2 個を含むタブ幅。
 set tabstop=2
 
-" Insert a tab with 2 minutes of half-width space.
+" 半角スペース2分のタブを挿入します。
 set softtabstop=2
 
 let g:vim_indent_count = 0
@@ -125,95 +127,38 @@ augroup END
 " }}}
 
 " Statusline{{{
-" Display statusline.
+" ステータスラインを表示します。
 set laststatus=2
 
-" Command line completion.
+" コマンドラインの補完。
 set wildmenu
 
-" Command history.
+" コマンド履歴。
 set history=5000
 " }}} 
 
 " Invisible characters{{{
-" Invisible characters
+" 見えない文字を表示します
 set list
 
-"Tab/End line Space/End line/No brake space.
+" タブ/終了行スペース/終了行/ブレーキスペースなし。
 set listchars=tab:»-,space:･,trail:･,nbsp:%,eol:↲,extends:»,precedes:«
 " }}}
 
-" Keybind settings.
-" Window control keybind {{{
-" overwrites window command of 'CTRL-W'.
-" Use prefix <Plug>(window).
-nnoremap <Plug>(window) <Nop>
-nmap <Space>w <Plug>(window)
-
-" Commands of move between window.
-nnoremap <Plug>(window)h <C-W>h
-nnoremap <Plug>(window)j <C-W>j
-nnoremap <Plug>(window)k <C-W>k
-nnoremap <Plug>(window)l <C-W>l
-
-" Commands of move window.
-nnoremap <Plug>(window)H <C-W>H
-nnoremap <Plug>(window)J <C-W>J
-nnoremap <Plug>(window)K <C-W>K
-nnoremap <Plug>(window)L <C-W>L
-
-" Tab page controls.
-nnoremap [t gT
-nnoremap ]t gt
-nnoremap [T <Cmd>tabfirst<CR>
-nnoremap ]T <Cmd>tablast<CR>
-nnoremap <Plug>(window)tn <Cmd>tabnew<CR>
-nnoremap <Plug>(window)tT <C-W>T
-
-" Commands of close window.
-nnoremap <Plug>(window)q <C-W>q
-nnoremap <Plug>(window)Q <Cmd>quit!<CR>
-
-" easy save. save file only when changed.
-nnoremap <Plug>(windows)w <Cmd>update<CR>
-
-" Commands of window split.
-nnoremap <Plug>(window)s <C-W>s
-nnoremap <Plug>(window)v <C-W>v
-nnoremap <Plug>(window)n <C-W>n
-
-" Window size controls.
-nnoremap <Plug>(window)<Bar> <C-W><Bar>
-nnoremap <Plug>(window)_ <C-W>_
-nnoremap <Plug>(window)= <C-W>=
-" }}}
-
 " Normal Mode:{{{
-" Do not save the things erased by x and c in the register.
-nnoremap x "_x
-nnoremap c "_c
-
-" Opens the file name under the cursor.
+" カーソル下のファイル名を開きます。
 nnoremap gf gF
 
-" Disable highlights from search results.
+" 検索結果のハイライトを無効にします。
 nnoremap <C-l> <Cmd>nohlsearch<Bar>diffupdate<CR><C-l>
 
 " }}}
 
 " Insert Mode:{{{
 
-" Exit insert mode.
+" 挿入モードを終了します。
 inoremap jj <ESC>
 inoremap <C-l> <Del>
-
-" }}}
-
-" Visual Mode:{{{
-
-" Do not save the things erased by x and c in the register.
-xnoremap x "_x
-xnoremap c "_c
 
 " }}}
 
