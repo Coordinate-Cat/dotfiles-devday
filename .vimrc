@@ -114,8 +114,6 @@ set tabstop=2
 " 半角スペース2分のタブを挿入します。
 set softtabstop=2
 
-let g:vim_indent_count = 0
-
 augroup filetypeIndent
   autocmd!
   autocmd FileType html   setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -158,6 +156,8 @@ nnoremap <C-l> <Cmd>nohlsearch<Bar>diffupdate<CR><C-l>
 
 " 挿入モードを終了します。
 inoremap jj <ESC>
+
+" <C-h>で<BS>のため、それの反対
 inoremap <C-l> <Del>
 
 " }}}
