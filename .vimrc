@@ -18,28 +18,28 @@ set fileformats=unix,dos
 let s:cache_dir = expand('~/.cache/vim')
 
 " backupfileをキャッシュ用のディレクトリに置くようにします
-let s:backup_dir = s:cache_dir . '/backup'
-if isdirectory(s:backup_dir)
-  call mkdir(s:backup_dir, 'p')
-  execute 'set backupdir=' . s:backup_dir
-  set backup
+let s:backupdir = s:cache_dir . '/backup'
+if !isdirectory(s:backupdir)
+  call mkdir(s:backupdir, 'p')
 endif
+execute 'set backupdir=' . s:backupdir
+set backup
 
 " swapfileをキャッシュ用のディレクトリに置くようにします
-let s:swap_dir = s:cache_dir . '/swap'
-if isdirectory(s:swap_dir)
-  call mkdir(s:swap_dir, 'p')
-  execute 'set directory=' . s:swap_dir
-  set swapfile
+let s:swapdir = s:cache_dir . '/swap'
+if !isdirectory(s:swapdir)
+  call mkdir(s:swapdir, 'p')
 endif
+execute 'set directory=' . s:swapdir
+set swapfile
 
 " undofileをキャッシュ用のディレクトリに置くようにします
-let s:undo_dir = s:cache_dir . '/undo'
-if isdirectory(s:undo_dir)
-  call mkdir(s:swap_dir, 'p')
-  execute 'set undodir=' . s:swap_dir
-  set undofile
+let s:undodir = s:cache_dir . '/undo'
+if !isdirectory(s:undodir)
+  call mkdir(s:undodir, 'p')
 endif
+execute 'set undodir=' . s:undodir
+set undofile
 
 " 東アジアの曖昧な文字幅の問題。
 set ambiwidth=single
@@ -114,8 +114,6 @@ set tabstop=2
 " 半角スペース2分のタブを挿入します。
 set softtabstop=2
 
-let g:vim_indent_count = 0
-
 augroup filetypeIndent
   autocmd!
   autocmd FileType html   setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -158,6 +156,8 @@ nnoremap <C-l> <Cmd>nohlsearch<Bar>diffupdate<CR><C-l>
 
 " 挿入モードを終了します。
 inoremap jj <ESC>
+
+" <C-h>で<BS>のため、それの反対
 inoremap <C-l> <Del>
 
 " }}}
