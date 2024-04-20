@@ -9,8 +9,8 @@ function plug_mana () {
 }
 
 
-ln -svf "$HOME/.zshrc" ~/.zshrc
-ln -svf "$HOME/.vimrc" ~/.vimrc
+ln -svf "$HOME/dotfiles-devday/.zshrc" ~/.zshrc
+ln -svf "$HOME/dotfiles-devday/.vimrc" ~/.vimrc
 
 plug_mana github.com/romkatv/powerlevel10k
 
