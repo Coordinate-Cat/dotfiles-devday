@@ -83,6 +83,10 @@ brew install --cask font-hack-nerd-font
   - 正規表現パターンのディレクトリを再帰的に検索
 - [bat](https://github.com/sharkdp/bat)
   - 翼を持った猫
+- [gitui](https://github.com/extrawurst/gitui)
+  - simpleなgitコマンドUI(Rust製)
+- [lazygit](https://github.com/jesseduffield/lazygit)
+  - simpleなgitコマンドUI
  
 ### vim系
 
