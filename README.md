@@ -75,6 +75,8 @@ brew install --cask font-hack-nerd-font
   - ターミナルエミュレータ
 - [codewhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/command-line.html)
   - AWS CLI の拡張
+- [uebersicht](https://tracesof.net/uebersicht/)
+  - デスクトップ上にウィジェットを表示する
 - [simple-bar](https://github.com/Jean-Tinland/simple-bar)
   - mac のステータスバー
 - [eza](https://github.com/eza-community/eza)
