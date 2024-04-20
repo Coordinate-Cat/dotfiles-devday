@@ -4,7 +4,7 @@
 
 ```bash
 # git clone
-git@github.com:Coordinate-Cat/dotfiles-devday.git
+git clone git@github.com:Coordinate-Cat/dotfiles-devday.git
 
 # dotfiles にリネーム
 mv dotfiles-devday dotfiles
@@ -13,7 +13,7 @@ mv dotfiles-devday dotfiles
 cd dotfiles
 
 # install.sh を実行
-zsh ./install.sh
+./install.sh
 ```
 
 ## 「シンボリックリンクを貼る」の意味
@@ -26,7 +26,7 @@ zsh ./install.sh
 ```bash
 # シンボリックリンクを貼る
 # ln -s [ファイルを置く場所はここだけど] [ファイルを働かせる場所はここ]
-ln -s /$HOME/dotfiles/.zshrc /$HOME/.zshrc
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 ```
 
 - このようにすることで、`~/dotfiles/.zshrc` を編集すると、`~/.zshrc` にも反映されるようになります。
@@ -47,17 +47,8 @@ ln -s /$HOME/dotfiles/.zshrc /$HOME/.zshrc
 
 ### p10k の設定
 
-https://github.com/romkatv/powerlevel10k
-
-1.インストール
-
-```bash
-ln -s /$HOME/dotfiles-devday/powerlevel10k /$HOME/powerlevel10k
-```
-
-2.ウィザードに答えてプロンプトの見た目を設定
-
-3.フォントに対応する
+フォントの対応
+https://www.nerdfonts.com/
 
 ```bash
 # フォントのインストール(絵文字がいっぱい入ってます)
