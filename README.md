@@ -71,12 +71,32 @@ brew install --cask font-hack-nerd-font
   - Spotify のコマンドラインインターフェース
 - [wezterm](https://wezfurlong.org/wezterm/index.html)
   - ターミナルエミュレータ
-- [vim-airline](https://github.com/vim-airline/vim-airline)
-  - vim のステータスバー
+- [Alacritty](https://github.com/alacritty/alacritty)
+  - ターミナルエミュレータ
 - [codewhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/command-line.html)
   - AWS CLI の拡張
 - [simple-bar](https://github.com/Jean-Tinland/simple-bar)
   - mac のステータスバー
+ 
+### vim系
+
+- [Neovim](https://neovim.io/)
+  - 超拡張可能なVimベースのテキスト エディター
+- [vimdoc-ja](https://github.com/vim-jp/vimdoc-ja)
+  - vim日本語化
+- [vim-jetpack](https://github.com/tani/vim-jetpack)
+  - plugin manager for Vim, Neovim
+- [vim-plug](https://github.com/junegunn/vim-plug)
+  - plugin manager
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+  - vim のステータスバー
+- [iceberg vim](https://github.com/cocopon/iceberg.vim)
+  - vim theme
+- [gruvbox](https://github.com/morhetz/gruvbox)
+  - vim theme
+- [vim-quickrun](https://github.com/thinca/vim-quickrun)
+  - task runner
+- [vim-qfreplace](https://github.com/thinca/vim-qfreplace/tree/master)
 
 ## dotfiles を作るのに役立つ資料
 
