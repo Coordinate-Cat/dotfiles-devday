@@ -77,6 +77,12 @@ brew install --cask font-hack-nerd-font
   - AWS CLI の拡張
 - [simple-bar](https://github.com/Jean-Tinland/simple-bar)
   - mac のステータスバー
+- [eza](https://github.com/eza-community/eza)
+  - lsの拡張
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - 正規表現パターンのディレクトリを再帰的に検索
+- [bat](https://github.com/sharkdp/bat)
+  - 翼を持った猫
  
 ### vim系
 
