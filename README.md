@@ -6,9 +6,6 @@
 # git clone
 git clone git@github.com:Coordinate-Cat/dotfiles-devday.git
 
-# dotfiles にリネーム
-mv dotfiles-devday dotfiles
-
 # dotfiles に移動
 cd dotfiles
 
