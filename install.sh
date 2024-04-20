@@ -8,11 +8,9 @@ function plug_mana () {
   git clone "https://${repo_path}.git" "${zsh_plugins_dir}/${repo_path}"
 }
 
-SCRIPT_DIR=$(dirname "$0")
-readonly SCRIPT_DIR
 
-ln -svf "$SCRIPT_DIR/.zshrc" ~/.zshrc
-ln -svf "$SCRIPT_DIR/.vimrc" ~/.vimrc
+ln -svf "$HOME/.zshrc" ~/.zshrc
+ln -svf "$HOME/.vimrc" ~/.vimrc
 
 plug_mana github.com/romkatv/powerlevel10k
 
