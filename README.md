@@ -97,6 +97,9 @@ brew install --cask font-hack-nerd-font
 - [vim-quickrun](https://github.com/thinca/vim-quickrun)
   - task runner
 - [vim-qfreplace](https://github.com/thinca/vim-qfreplace/tree/master)
+- [nerdtree](https://github.com/preservim/nerdtree)
+- [oil.nvim](https://github.com/stevearc/oil.nvim)
+  - nerdtreeのnvim用
 
 ## dotfiles を作るのに役立つ資料
 
